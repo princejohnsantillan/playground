@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "626b9e7ddd47fb7eff9aaa53cce0c9ad",
+    "content-hash": "1ca18e07481ccb1a184c8c1b680fc69f",
     "packages": [
         {
             "name": "brick/math",
@@ -2422,6 +2422,70 @@
             "time": "2024-12-30T11:07:19+00:00"
         },
         {
+            "name": "notifiablehq/receive-email",
+            "version": "0.7.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NotifiableHQ/receive-email.git",
+                "reference": "dc3d891363f1068838a105667fcbd79d5e8cf0a3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/NotifiableHQ/receive-email/zipball/dc3d891363f1068838a105667fcbd79d5e8cf0a3",
+                "reference": "dc3d891363f1068838a105667fcbd79d5e8cf0a3",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "^11.6",
+                "php-mime-mail-parser/php-mime-mail-parser": "^8.0"
+            },
+            "require-dev": {
+                "larastan/larastan": "^2.9",
+                "laravel/pint": "^1.15",
+                "orchestra/testbench": "^9.0",
+                "pestphp/pest": "^2.34"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Notifiable\\ReceiveEmail\\ReceiveEmailServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-4": {
+                    "Notifiable\\ReceiveEmail\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Prince John Santillan",
+                    "email": "mail@princejohnsantillan.net"
+                }
+            ],
+            "description": "Let your Laravel app receive emails.",
+            "keywords": [
+                "inbound-email",
+                "inbound-emails",
+                "laravel",
+                "receive-email",
+                "receive-emails"
+            ],
+            "support": {
+                "issues": "https://github.com/NotifiableHQ/receive-email/issues",
+                "source": "https://github.com/NotifiableHQ/receive-email/tree/0.7.0"
+            },
+            "time": "2024-06-01T11:30:08+00:00"
+        },
+        {
             "name": "nunomaduro/termwind",
             "version": "v2.3.0",
             "source": {
@@ -2507,6 +2571,91 @@
                 }
             ],
             "time": "2024-11-21T10:39:51+00:00"
+        },
+        {
+            "name": "php-mime-mail-parser/php-mime-mail-parser",
+            "version": "8.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-mime-mail-parser/php-mime-mail-parser.git",
+                "reference": "c2da5a758f3abe273eeeb4cb70a6175dc49dff3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-mime-mail-parser/php-mime-mail-parser/zipball/c2da5a758f3abe273eeeb4cb70a6175dc49dff3d",
+                "reference": "c2da5a758f3abe273eeeb4cb70a6175dc49dff3d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-mailparse": "*",
+                "php": "^8.0"
+            },
+            "replace": {
+                "exorus/php-mime-mail-parser": "*",
+                "messaged/php-mime-mail-parser": "*"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.2",
+                "phpunit/phpunit": "^9.3",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PhpMimeMailParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "eXorus",
+                    "email": "exorus.spam@gmail.com",
+                    "homepage": "https://github.com/eXorus/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "M.Valinskis",
+                    "email": "M.Valins@gmail.com",
+                    "homepage": "https://code.google.com/p/php-mime-mail-parser",
+                    "role": "Developer"
+                },
+                {
+                    "name": "eugene.emmett.wood",
+                    "email": "gene_w@cementhorizon.com",
+                    "homepage": "https://code.google.com/p/php-mime-mail-parser",
+                    "role": "Developer"
+                },
+                {
+                    "name": "alknetso",
+                    "email": "alkne@gmail.com",
+                    "homepage": "https://code.google.com/p/php-mime-mail-parser",
+                    "role": "Developer"
+                },
+                {
+                    "name": "bucabay",
+                    "email": "gabe@fijiwebdesign.com",
+                    "homepage": "http://www.fijiwebdesign.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A fully tested email parser for PHP 8.0+ (mailparse extension wrapper).",
+            "homepage": "https://github.com/php-mime-mail-parser/php-mime-mail-parser",
+            "keywords": [
+                "MimeMailParser",
+                "mail",
+                "mailparse",
+                "mime",
+                "parser",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/issues",
+                "source": "https://github.com/php-mime-mail-parser/php-mime-mail-parser/tree/8.0.4"
+            },
+            "time": "2024-09-11T12:19:09+00:00"
         },
         {
             "name": "phpoption/phpoption",
