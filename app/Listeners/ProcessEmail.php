@@ -28,12 +28,12 @@ class ProcessEmail
 
         $toEmail = $event->email->parse()->getAddresses('to')[0]['address'];
 
-        logger([
+        cache(['cached' => [
             'name' => $fromName,
             'from' => $fromAddress,
             'to' => $toEmail,
             'subject' => $subject,
             'message' => $message,
-        ]);
+        ]]);
     }
 }
