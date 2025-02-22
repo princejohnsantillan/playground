@@ -7,7 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/cached', function () {
-    return cache('cached');
+Route::get('/testimonials', function() {
+    return view('testimonials', [ 'testimonials' => \App\Models\Testimonial::all()]);
 });
